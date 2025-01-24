@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: ${App_Name:configserver}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+server:
+  port: 9000
+
+logging:
+  level:
+    com:
+      eazybytes: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
