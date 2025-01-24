@@ -10,15 +10,51 @@ spring:
     hibernate:
       ddl-auto: ${DDL_AUTO:update}
     show-sql: ${SHOW_SQL:true}
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: "http://localhost:8180/realms/eazybankdev/protocol/openid-connect/certs"
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+    shutdown:
+      access: unrestricted
+  info:
+    env:
+      enabled: true
 
 keycloak:
   auth-server-url: ${KEYCLOAK_AUTH_URL:http://localhost:8180/realms/eazybankdev/protocol/openid-connect/auth}
   token-url: ${KEYCLOAK_TOKEN_URL:http://localhost:8180/realms/eazybankdev/protocol/openid-connect/token}
+
+logging:
+  level:
+    com:
+      uexcel:
+        regular: DEBUG
+  pattern:
+     level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 server:
   port: 8080
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8075/eureka/
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: "Regular Rooms"
+    version: 1.0
