@@ -23,8 +23,8 @@ import org.springframework.context.annotation.Configuration;
             return new OpenAPI().components(new Components()
                             .addSecuritySchemes(OAUTH_SCHEME_NAME, createOAuthScheme()))
                     .addSecurityItem(new SecurityRequirement().addList(OAUTH_SCHEME_NAME))
-                    .info(new Info().title("Executive Rooms Microservice")
-                            .description("A service for executive rooms.")
+                    .info(new Info().title("Apartment Microservice")
+                            .description("A service for Apartments.")
                             .version("1.0"));
         }
 

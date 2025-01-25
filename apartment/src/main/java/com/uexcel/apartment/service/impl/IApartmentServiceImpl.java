@@ -1,6 +1,7 @@
 package com.uexcel.apartment.service.impl;
 
 import com.uexcel.apartment.constants.Month;
+import com.uexcel.apartment.dto.ApartmentDto;
 import com.uexcel.apartment.dto.AvailableApartmentDto;
 import com.uexcel.apartment.dto.ReservedRoomInFoDto;
 import com.uexcel.apartment.exception.AppExceptions;
@@ -147,6 +148,38 @@ public class IApartmentServiceImpl implements IApartmentService {
 
     }
 
+    @Override
+    public List<ApartmentDto> getApartments() {
+        List<Apartment> apartments = apartmentRepository.findByA1Apartment();
+        List<ApartmentDto> apartmentDtos = new ArrayList<>();
+        apartments.forEach(apartment -> {
+
+
+            if (!apartment.getReservationDates().isEmpty()) {
+                /*
+            creating new reservation for feign client
+             */
+                List<com.uexcel.apartment.openfeign.ReservationDates> rds = new ArrayList<>();
+                apartment.getReservationDates().forEach(reservationDate -> {
+                    com.uexcel.apartment.openfeign.ReservationDates rd =
+                            new com.uexcel.apartment.openfeign.ReservationDates();
+                    rd.setDate(reservationDate.getDate());
+                    rd.setId(reservationDate.getId());
+                    rd.setReservation(reservationDate.getReservation());
+                    rds.add(rd);
+                    rds.sort(Comparator.comparing(com.uexcel.apartment.openfeign.ReservationDates::getDate));
+                });
+                ApartmentDto apartmentDto = ApartmentDto.builder()
+                        .apartmentCode(apartment.getApartmentCode())
+                        .id(apartment.getId())
+                        .price(apartment.getPrice())
+                        .reservationDates(rds)
+                        .build();
+                apartmentDtos.add(apartmentDto);
+            }
+        });
+        return apartmentDtos;
+    }
 
 
 }

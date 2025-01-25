@@ -26,8 +26,8 @@ public class SwaggerConfig {
         return new OpenAPI().components(new Components()
                         .addSecuritySchemes(OAUTH_SCHEME_NAME, createOAuthScheme()))
                 .addSecurityItem(new SecurityRequirement().addList(OAUTH_SCHEME_NAME))
-                .info(new Info().title("Executive Rooms Microservice")
-                        .description("A service for executive rooms.")
+                .info(new Info().title("Regular Rooms Microservice")
+                        .description("A service for regular rooms.")
                         .version("1.0"));
     }
 

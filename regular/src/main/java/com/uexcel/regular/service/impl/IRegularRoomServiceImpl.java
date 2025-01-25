@@ -2,6 +2,7 @@ package com.uexcel.regular.service.impl;
 
 import com.uexcel.regular.constants.Month;
 import com.uexcel.regular.dto.AvailableRoomsDto;
+import com.uexcel.regular.dto.RegularRoomDto;
 import com.uexcel.regular.dto.ReservedRoomInFoDto;
 import com.uexcel.regular.exception.AppExceptions;
 import com.uexcel.regular.mapper.GetRsvByRoomNumberMapper;
@@ -26,6 +27,25 @@ public class IRegularRoomServiceImpl implements IRegularRoomService {
     private final RegularRoomRepository regularRoomRepository;
     private final GetRsvByRoomNumberMapper rsvMapper;
     private final Month month;
+
+    @Override
+    public List<RegularRoomDto> findAllRegularRooms() {
+        List<RegularRoomDto> regularRoomDtoList = new ArrayList<>();
+     List<RegularRoom>  rooms  =  regularRoomRepository.findAll();
+     rooms.forEach(rm -> {
+         if(!rm.getReservationDates().isEmpty()) {
+             List<ReservationDates> reservationDates = rm.getReservationDates();
+             reservationDates.sort(Comparator.comparing(ReservationDates::getDate));
+             RegularRoomDto regularRoomDto = RegularRoomDto.builder()
+                     .id(rm.getId()).price(rm.getPrice())
+                     .roomNumber(rm.getRoomNumber())
+                     .reservationDates(reservationDates).build();
+             regularRoomDtoList.add(regularRoomDto);
+         }
+     });
+        return regularRoomDtoList;
+    }
+
     @Override
     public ReservedRoomInFoDto getRegularRoomByRoomNumber(String roomNumber) {
         List<ReservationDates> regularRoom =

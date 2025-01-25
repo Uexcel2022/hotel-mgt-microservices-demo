@@ -2,6 +2,7 @@ package com.uexcel.executive.service.impl;
 
 import com.uexcel.executive.constants.Month;
 import com.uexcel.executive.dto.AvailableRoomsDto;
+import com.uexcel.executive.dto.ExecutiveRoomDto;
 import com.uexcel.executive.dto.ReservedRoomInFoDto;
 import com.uexcel.executive.exception.AppExceptions;
 import com.uexcel.executive.mapper.GetRsvByRoomNumberMapper;
@@ -135,6 +136,25 @@ public class IExecutiveRoomServiceImpl implements IExecutiveRoomService {
 
     }
 
+    @Override
+    public List<ExecutiveRoomDto> getExecutiveRooms() {
+        List<ExecutiveRoom> executiveRooms = executiveRoomRepository.findAll();
+        List<ExecutiveRoomDto> executiveRoomDtos = new ArrayList<>();
+        executiveRooms.forEach(em -> {
+            if(!em.getReservationDates().isEmpty()) {
+                List<ReservationDates> reservationDates = em.getReservationDates();
+                reservationDates.sort(Comparator.comparing(ReservationDates::getDate));
+                ExecutiveRoomDto executiveRoomDto = ExecutiveRoomDto.builder()
+                        .id(em.getId()).roomNumber(em.getRoomNumber())
+                        .price(em.getPrice()).reservationDates(reservationDates)
+                        .build();
+
+                executiveRoomDtos.add(executiveRoomDto);
+            }
+        });
+
+        return executiveRoomDtos;
+    }
 
 
 }

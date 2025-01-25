@@ -1,6 +1,7 @@
 package com.uexcel.executive.controller;
 
 import com.uexcel.executive.dto.ErrorResponseDto;
+import com.uexcel.executive.dto.ExecutiveRoomDto;
 import com.uexcel.executive.dto.ReservedRoomInFoDto;
 import com.uexcel.executive.exception.AppExceptions;
 import com.uexcel.executive.service.IExecutiveRoomService;
@@ -16,6 +17,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
 @Tag(name = "REST APIs to Fetch Executive Rooms  Information.",
         description = "REST APIs to Fetch Executive Rooms Consolidated  Information.")
 @RestController
@@ -57,5 +61,10 @@ public class ExecutiveRoomController {
             );
         }
         return new ResponseEntity<>(executiveRoom, HttpStatus.OK);
+    }
+    @GetMapping("/rooms")
+    public ResponseEntity<List<ExecutiveRoomDto>> getExecutiveRooms() {
+        List<ExecutiveRoomDto> executiveRoomDtoList = executiveRoomService.getExecutiveRooms();
+        return new ResponseEntity<>(executiveRoomDtoList, HttpStatus.OK);
     }
 }

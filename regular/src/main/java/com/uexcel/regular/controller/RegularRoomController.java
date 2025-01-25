@@ -1,9 +1,10 @@
 package com.uexcel.regular.controller;
 
 import com.uexcel.regular.dto.ErrorResponseDto;
-import com.uexcel.regular.dto.FreeRoomsDto;
+import com.uexcel.regular.dto.RegularRoomDto;
 import com.uexcel.regular.dto.ReservedRoomInFoDto;
 import com.uexcel.regular.exception.AppExceptions;
+import com.uexcel.regular.model.RegularRoom;
 import com.uexcel.regular.service.IRegularRoomService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -17,6 +18,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
 @Tag(name = "REST APIs to Fetch Regular Rooms  Information.",
         description = "REST APIs to Fetch Regular Rooms Consolidated  Information.")
 @RestController
@@ -58,5 +62,34 @@ public class RegularRoomController {
             );
         }
         return new ResponseEntity<>(regularRoom, HttpStatus.OK);
+    }
+
+    @Operation(summary = "REST APIs to Fetch All Regular Rooms  Details.",
+            description = "REST APIs to Fetch Regular Rooms  Details.",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",description = "Ok",
+                            content = @Content(schema=@Schema(implementation= RegularRoom.class))
+                    ),
+                    @ApiResponse(
+                            responseCode = "400",description = "Bad Request",
+                            content = @Content(schema=@Schema(implementation= ErrorResponseDto.class))
+                    ),
+                    @ApiResponse(
+                            responseCode = "404",description = "Not Found",
+                            content = @Content(schema=@Schema(implementation=ErrorResponseDto.class))
+                    ),
+                    @ApiResponse(
+                            responseCode = "500",description = "Internal Server Error",
+                            content = @Content(schema=@Schema(implementation= ErrorResponseDto.class))
+                    )
+            }
+
+    )
+    @GetMapping("/rooms")
+    public ResponseEntity<List<RegularRoomDto>> getRegularRoomById() {
+        List<RegularRoomDto> RegularRoomDtoList =
+                regularRoomService.findAllRegularRooms();
+        return new ResponseEntity<>(RegularRoomDtoList, HttpStatus.OK);
     }
 }
