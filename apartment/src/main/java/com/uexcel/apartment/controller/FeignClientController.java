@@ -1,7 +1,6 @@
 package com.uexcel.apartment.controller;
 
 import com.uexcel.apartment.dto.ApartmentDto;
-import com.uexcel.apartment.dto.AvailableApartmentDto;
 import com.uexcel.apartment.dto.ConsolidatedInfoDto;
 import com.uexcel.apartment.dto.ErrorResponseDto;
 import com.uexcel.apartment.openfeign.executive.ExecutiveFeignClient;

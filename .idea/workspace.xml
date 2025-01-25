@@ -4,42 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c40332d1-aa76-4e70-bc18-3c2efd3a3fea" name="Changes" comment="added Eureka server and code changes">
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/controller/FeignClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/dto/ApartmentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/dto/ConsolidatedInfoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/openfeign/ReservationDates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/openfeign/executive/ExecutiveFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/openfeign/executive/ExecutiveFeignClientFallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/openfeign/executive/ExecutiveRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/openfeign/regular/RegularRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/openfeign/regular/RegularRoomFallBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/openfeign/regular/RegularRoomFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/dto/ExecutiveRoomDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/RegularRoomDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apartment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/ApartmentAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/ApartmentAppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/service/IApartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/service/IApartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/service/impl/IApartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/service/impl/IApartmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/executive/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/executive/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/controller/ExecutiveRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/controller/ExecutiveRoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/service/IExecutiveRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/service/IExecutiveRoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/service/impl/IExecutiveRoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/service/impl/IExecutiveRoomServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/regular/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/controller/RegularRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/controller/RegularRoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/model/ReservationDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/model/ReservationDates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/IRegularRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/IRegularRoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/IReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/IReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/impl/IRegularRoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/impl/IRegularRoomServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="c40332d1-aa76-4e70-bc18-3c2efd3a3fea" name="Changes" comment="added consolidated reservation details endpoints and code changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,31 +42,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApartmentAppApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ConfigserverApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaserverApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ExecutiveRoomAppApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.RegularRoomAppApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.ApartmentAppApplication.executor": "Run",
+    "Spring Boot.ConfigserverApplication.executor": "Run",
+    "Spring Boot.EurekaserverApplication.executor": "Run",
+    "Spring Boot.ExecutiveRoomAppApplication.executor": "Run",
+    "Spring Boot.RegularRoomAppApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -197,7 +169,7 @@
       <workItem from="1737664810643" duration="688000" />
       <workItem from="1737665515316" duration="4000000" />
       <workItem from="1737724213688" duration="8871000" />
-      <workItem from="1737745902750" duration="13838000" />
+      <workItem from="1737745902750" duration="14432000" />
     </task>
     <task id="LOCAL-00001" summary="added Eureka server and code changes">
       <option name="closed" value="true" />
@@ -215,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737726938466</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added consolidated reservation details endpoints and code changes">
+      <option name="closed" value="true" />
+      <created>1737763607221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737763607221</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +203,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added Eureka server and code changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Eureka server and code changes" />
+    <MESSAGE value="added consolidated reservation details endpoints and code changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added consolidated reservation details endpoints and code changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

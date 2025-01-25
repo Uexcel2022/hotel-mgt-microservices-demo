@@ -3,7 +3,6 @@ package com.uexcel.regular.service;
 import com.uexcel.regular.dto.AvailableRoomsDto;
 import com.uexcel.regular.dto.RegularRoomDto;
 import com.uexcel.regular.dto.ReservedRoomInFoDto;
-import com.uexcel.regular.model.RegularRoom;
 
 import java.util.List;
 import java.util.Map;

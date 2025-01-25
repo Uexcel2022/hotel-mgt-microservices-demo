@@ -4,7 +4,6 @@ import com.uexcel.regular.dto.FreeRoomsDto;
 import com.uexcel.regular.dto.ReservationDto;
 import com.uexcel.regular.dto.ReservationResponseDto;
 import com.uexcel.regular.dto.ResponseDto;
-import com.uexcel.regular.model.RegularRoom;
 
 import java.util.List;
 
