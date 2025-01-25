@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Builder
@@ -17,5 +16,5 @@ public class RegularRoomDto {
     @Column(unique = true,nullable = false)
     private String roomNumber;
     private double price;
-    private List<ReservationDates> reservationDates = new ArrayList<>();
+    private List<ReservationDates> reservationDates;
 }
