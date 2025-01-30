@@ -4,16 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e244297a-50b9-4511-99ca-4340f7f9dccf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/eazybytes/gatewayserver/controller/FallbackController.java" afterDir="false" />
+    <list default="true" id="e244297a-50b9-4511-99ca-4340f7f9dccf" name="Changes" comment="implementing circle breaker">
+      <change afterPath="$PROJECT_DIR$/docker-compose/DBServices.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/apartment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/common-config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/executive-DB.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose/regular-DB.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/controller/ReservationDatesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/controller/ReservationDatesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/service/impl/ICheckinImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/apartment/src/main/java/com/uexcel/apartment/service/impl/ICheckinImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/executive/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/executive/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/controller/ReservationDatesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/controller/ReservationDatesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/service/impl/ICheckinImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/executive/src/main/java/com/uexcel/executive/service/impl/ICheckinImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatewayserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/java/com/eazybytes/gatewayserver/GatewayserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/eazybytes/gatewayserver/GatewayserverApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/regular/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/regular/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/RegularRoomAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/config/CustomAccessDenied.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/constants/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/constants/Month.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/controller/CheckinController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/controller/ExperimentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/controller/RegularRoomController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/controller/ReservationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/controller/ReservationDatesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/converter/KeyCloakRoleConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/AvailableRoomsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/CheckinRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/CheckinResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/DateRoomsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ErrorResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/FreeRoomsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/RegularRoomDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ReservationDatesDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ReservationDetailsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ReservationDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ReservationInfoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ReservationResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ReservedErrorResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ReservedRoomInFoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/dto/ResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/exception/AppExceptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/exception/ReservedRoomException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/filter/CsrfCookieFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/mapper/CheckinMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/mapper/GetRsvByRoomNumberMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/model/Checkin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/model/RegularRoom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/model/Reservation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/model/ReservationDates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/persistence/CheckinRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/persistence/RegularRoomRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/persistence/ReservationDateRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/persistence/ReservationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/ICheckinService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/IRegularRoomService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/IReservationDatesService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/IReservationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/impl/ICheckinImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/impl/IRegularRoomServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/impl/IReservationDatesServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regular/src/main/java/com/uexcel/regular/service/impl/IReservationServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,59 +88,62 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Uexcel2022"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Uexcel2022&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Uexcel2022/hotel-mgt-microservices-demo.git",
-    "accountId": "c20b4ad7-56cc-49d9-8d43-d091e4683766"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Uexcel2022/hotel-mgt-microservices-demo.git&quot;,
+    &quot;accountId&quot;: &quot;c20b4ad7-56cc-49d9-8d43-d091e4683766&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2sGbA8OjlO3rUc0OXa7hTIe1TFt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.ApartmentAppApplication.executor": "Run",
-    "Spring Boot.EurekaserverApplication.executor": "Run",
-    "Spring Boot.ExecutiveRoomAppApplication.executor": "Run",
-    "Spring Boot.GatewayserverApplication.executor": "Run",
-    "Spring Boot.RegularRoomAppApplication.executor": "Debug",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/hotel-mgmt-microservice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose/docker-compose.yaml.regular-rooms: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose/docker-compose.yaml.regularDb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;703&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;702&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApartmentAppApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaserverApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ExecutiveRoomAppApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayserverApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RegularRoomAppApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/hotel-mgmt-microservice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayserverApplication">
+  <component name="RunManager" selected="Spring Boot.ExecutiveRoomAppApplication">
     <configuration name="ApartmentAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="apartment" />
@@ -135,8 +196,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose/docker-compose.yaml.regular-rooms: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="regular-rooms" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose/docker-compose.yaml.regularDb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="regularDb" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose/docker-compose.yaml.regular-rooms: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose/docker-compose.yaml.regularDb: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Spring Boot.EurekaserverApplication" />
       </list>
     </recent_temporary>
@@ -157,11 +261,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738084714288</updated>
-      <workItem from="1738084716132" duration="10430000" />
+      <workItem from="1738084716132" duration="12744000" />
+      <workItem from="1738148893444" duration="8244000" />
+      <workItem from="1738186348625" duration="14000000" />
+      <workItem from="1738227554897" duration="4110000" />
+      <workItem from="1738239253284" duration="7439000" />
     </task>
+    <task id="LOCAL-00001" summary="implementing circle breaker">
+      <option name="closed" value="true" />
+      <created>1738099691631</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738099691631</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implementing circle breaker" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing circle breaker" />
   </component>
 </project>

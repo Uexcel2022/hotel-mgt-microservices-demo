@@ -1,0 +1,30 @@
+services:
+  apartmentDB:
+    container_name: apartmentDB
+    ports:
+      - "3330:3306"
+    environment:
+      MYSQL_DATABASE: "apartment"
+    extends:
+      file: common-config.yaml
+      service: DB-connection
+
+  executiveDB:
+    container_name: executiveDB
+    ports:
+      - "3320:3306"
+    environment:
+      MYSQL_DATABASE: "executive"
+    extends:
+      file: common-config.yaml
+      service: DB-connection
+
+  regularDB:
+    container_name: regularDB
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "regular"
+    extends:
+      file: common-config.yaml
+      service: DB-connection

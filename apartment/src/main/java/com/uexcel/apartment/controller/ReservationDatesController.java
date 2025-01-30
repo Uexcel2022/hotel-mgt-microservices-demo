@@ -110,7 +110,7 @@ public class ReservationDatesController {
 
     @PutMapping
     public ResponseEntity<ResponseDto> updateReservationDates(@RequestBody List<ReservationDates> reservationDates ){
-        Reservation reservation = reservationDates.getFirst().getReservation();
+        Reservation reservation = reservationDates.get(0).getReservation();
         List<ReservationDates> rsvDate = new ArrayList<>();
         reservationDates.forEach(reservationDate -> {
             ReservationDates dt = new ReservationDates();

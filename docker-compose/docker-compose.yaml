@@ -1,0 +1,36 @@
+services:
+  apartmentDB:
+    extends:
+      file: DBServices.yaml
+      service: apartmentDB
+  apartment:
+    depends_on:
+      apartmentDB:
+        condition: service_healthy
+    extends:
+      file: apartment.yaml
+      service: apartment
+#----------------------------------------------------------------------
+  executiveDB:
+    extends:
+      file: executive
+      service: executiveDB
+  executive:
+    extends:
+      file: executive
+      service: executive
+#-------------------------------------------------------------------------
+  regularDB:
+    extends:
+      file: regular-DB.yaml
+      service: regularDB
+  regular:
+    extends:
+      file: regular-DB.yaml
+      service: regular
+#--------------------------------------------------------------------
+
+
+networks:
+  hotel:
+    driver: "bridge"

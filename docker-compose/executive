@@ -1,0 +1,20 @@
+services:
+
+
+  executive:
+    image: "uexcel247/executive:1.0"
+    container_name: "executive-ms"
+    ports:
+      - "8090:8090"
+    depends_on:
+      executiveDB:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "executive"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://executiveDB:3306/executive"
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_DATASOURCE_USERNAME: root
+      NUMBER_OF_ROOMS: 5
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service

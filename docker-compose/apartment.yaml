@@ -1,0 +1,16 @@
+services:
+  apartment:
+    image: "uexcel247/apartment:1.0"
+    container_name: "apartment-ms"
+    ports:
+      - "8085:8085"
+    environment:
+      SPRING_APPLICATION_NAME: "apartment"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://apartmentDB:3306/apartment"
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_DATASOURCE_USERNAME: root
+      NUMBER_OF_ROOMS: 5
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service
+

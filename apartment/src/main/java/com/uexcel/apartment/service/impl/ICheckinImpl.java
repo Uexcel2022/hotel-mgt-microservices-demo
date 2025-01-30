@@ -51,7 +51,7 @@ public class ICheckinImpl implements ICheckinService {
         Apartment room = null;
         for (LocalDate checkinDate : intendedCheckinDates) {
             if (!rsvDates.isEmpty()) {
-                room = rsvDates.getFirst().getApartment();  //getting the room details.
+                room = rsvDates.get(0).getApartment();  //getting the room details.
                 ReservationDates rsvDate =
                                 rsvDates.stream().filter(v -> v.getDate().equals(checkinDate)).findFirst().orElse(null);
                 if (rsvDate != null) {
